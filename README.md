@@ -78,10 +78,10 @@ This project demonstrates the end-to-end engineering of a centralized, enterpris
 ## Screenshots & Proof of Execution
 
 ### 1. UFW Firewall Configuration on sec-box
-![UFW Firewall Rules](assets/ufw-rules.png)
+![UFW Firewall Rules](ufw-rules.png)
 
 ### 2. pfSense Perimeter Telemetry in Wazuh Discover
-![pfSense Perimeter Logs](assets/pfsense-discover.png)
+![pfSense Perimeter Logs](pfsense-discover.png)
 
 ### 3. Windows Server DC & Sysmon Telemetry in Wazuh Discover
-![project-x-dc Sysmon Alerts](assets/project-x-dc-sysmon-discover.png)
+![project-x-dc Sysmon Alerts](project-x-dc-sysmon-discover.png)
