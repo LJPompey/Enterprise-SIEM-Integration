@@ -20,26 +20,4 @@ This project demonstrates the end-to-end engineering of a centralized, enterpris
                                                                 ▲
 [ project-x-dc + Sysmon (10.0.0.5) ] ──(Wazuh Agent / TCP 1514)─┘
 
-1. Perimeter Log Ingestion (pfSense & Suricata)
-Configured pfSense remote logging using BSD (RFC 3164) format to forward firewall (filterlog), web service (nginx/php-fpm), and Suricata WAN IPS alerts directly to the Wazuh Manager.
-
-Engineered custom Wazuh detection rules in /var/ossec/etc/rules/local_rules.xml to classify baseline perimeter syslog traffic (level 5) and escalate Suricata IPS alert/block events (level 10):
-
-<group name="pfsense,suricata,perimeter,">
-  <rule id="100100" level="5">
-    <decoded_as>pf</decoded_as>
-    <description>pfSense firewall event logged ($(action) $(protocol) from $(srcip) to $(dstip)).</description>
-  </rule>
-
-  <rule id="100102" level="5">
-    <location>10.0.0.6</location>
-    <description>pfSense perimeter syslog event received from 10.0.0.6.</description>
-  </rule>
-
-  <rule id="100101" level="10">
-    <if_sid>100100,100102</if_sid>
-    <match>suricata|SURICATA|alert|ALERT|drop|DROP|block|BLOCK</match>
-    <description>Suricata IPS alert or block event reported by pfSense perimeter.</description>
-  </rule>
-</group>
 
