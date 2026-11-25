@@ -75,4 +75,4 @@ This project demonstrates the end-to-end engineering of a centralized, enterpris
   2. **Windows Security / AD:** Kerberos authentication and Event ID `4634` (`logonType: 3`) within the `CORP` domain.
   3. **FIM / Registry Monitoring (`syscheck`):** Real-time registry modifications under `HKLM\System\CurrentControlSet\Services\bam\State\UserSettings`.
 
-*(Add screenshots to `/assets/`: `pfsense-discover.png`, `project-x-dc-sysmon-discover.png`, `ufw-rules.png`)*
+
