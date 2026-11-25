@@ -75,4 +75,13 @@ This project demonstrates the end-to-end engineering of a centralized, enterpris
   2. **Windows Security / AD:** Kerberos authentication and Event ID `4634` (`logonType: 3`) within the `CORP` domain.
   3. **FIM / Registry Monitoring (`syscheck`):** Real-time registry modifications under `HKLM\System\CurrentControlSet\Services\bam\State\UserSettings`.
 
+## Screenshots & Proof of Execution
 
+### 1. UFW Firewall Configuration on sec-box
+![UFW Firewall Rules](assets/ufw-rules.png)
+
+### 2. pfSense Perimeter Telemetry in Wazuh Discover
+![pfSense Perimeter Logs](assets/pfsense-discover.png)
+
+### 3. Windows Server DC & Sysmon Telemetry in Wazuh Discover
+![project-x-dc Sysmon Alerts](assets/project-x-dc-sysmon-discover.png)
