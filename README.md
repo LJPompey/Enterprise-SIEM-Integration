@@ -3,6 +3,8 @@
 ## Overview
 This project demonstrates the end-to-end engineering of a centralized, enterprise-grade Security Information and Event Management (SIEM) architecture built entirely with open-source tools. By correlating agentless perimeter firewall and IPS logs from **pfSense and Suricata** with deep endpoint telemetry from a **Windows Server Active Directory Domain Controller running Sysmon**, this environment replicates a real-world Tier 1 and Tier 2 SOC visibility stack.
 
+[Read the Full Technical Breakdown on Medium](https://medium.com/@pompey.lamont01/from-raw-telemetry-to-automated-triage-building-a-zero-cost-enterprise-siem-cloud-soar-pipeline-d47e139d11f6?sharedUserId=pompey.lamont01)
+
 ---
 
 ## Lab Architecture & Network Topology
